@@ -549,25 +549,6 @@ wheels = [
 ]
 
 [[package]]
-name = "icat"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "matplotlib" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "jupyter" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "matplotlib", specifier = ">=3.9.2" }]
-
-[package.metadata.requires-dev]
-dev = [{ name = "jupyter", specifier = ">=1.1.1" }]
-
-[[package]]
 name = "idna"
 version = "3.8"
 source = { registry = "https://pypi.org/simple" }
@@ -645,6 +626,31 @@ sdist = { url = "https://files.pythonhosted.org/packages/b1/b9/3ba6c45a6df813c09
 wheels = [
     { url = "https://files.pythonhosted.org/packages/47/6b/d9fdcdef2eb6a23f391251fde8781c38d42acd82abe84d054cb74f7863b0/ipython-8.18.1-py3-none-any.whl", hash = "sha256:e8267419d72d81955ec1177f8a29aaa90ac80ad647499201119e2f05e99aa397", size = 808161 },
 ]
+
+[[package]]
+name = "ipython-icat"
+version = "0.0.1"
+source = { editable = "." }
+dependencies = [
+    { name = "ipython" },
+    { name = "matplotlib" },
+    { name = "pillow" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "jupyter" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "ipython", specifier = ">=8.18.1" },
+    { name = "matplotlib", specifier = ">=3.9.2" },
+    { name = "pillow", specifier = ">=10.4.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "jupyter", specifier = ">=1.1.1" }]
 
 [[package]]
 name = "ipywidgets"
