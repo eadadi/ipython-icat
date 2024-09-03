@@ -102,5 +102,14 @@ class ICatMagics(Magics):
             _icat(output=False, input=buf.getbuffer())
 
 
+def icat(img: Image.Image, width: int = None, height: int = None):
+    img_ = img.copy()
+    with BytesIO() as buf:
+        if width or height:
+            img_.thumbnail((width or img.width, height or img.height))
+        img_.save(buf, format="PNG")
+        _icat(output=False, input=buf.getbuffer())
+
+
 def load_ipython_extension(ipython):
     ipython.register_magics(ICatMagics)
