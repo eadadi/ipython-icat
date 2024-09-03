@@ -1,5 +1,7 @@
 # ipython-icat
 
+[![PyPI version](https://img.shields.io/pypi/v/ipython-icat.svg?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/ipython-icat/)
+
 ## Installation
 
 You can install `ipython-icat` using pip:
