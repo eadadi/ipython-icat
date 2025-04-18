@@ -35,8 +35,14 @@ To use the kitty backend for matplotlib:
 ```python
 %plt_icat
 ```
-
 After running this command, any matplotlib plots you create will be displayed directly in your kitty terminal.
+
+### Use as a Default Backend
+
+To set the kitty backend for matplotlib as the default, add the following lines to your IPython configuration file:
+
+1. `c.InteractiveShellApp.extensions = ['icat']`
+2. `c.InteractiveShellApp.exec_lines = ['%plt_icat']`
 
 ### Displaying Images
 
