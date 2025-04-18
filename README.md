@@ -16,7 +16,7 @@ pip install ipython-icat
 - IPython
 - matplotlib
 - Pillow (PIL)
-- kitty terminal
+- terminal emulator with support for kitty graphics protocol (KGP) e.g., kitty, ghostty
 
 ## Usage
 
@@ -35,6 +35,7 @@ To use the kitty backend for matplotlib:
 ```python
 %plt_icat
 ```
+
 After running this command, any matplotlib plots you create will be displayed directly in your kitty terminal.
 
 ### Use as a Default Backend
@@ -66,6 +67,10 @@ You can also resize the image when displaying:
 %icat path/to/your/image.jpg -w 300 -h 200
 ```
 
+### Using Ghostty
+
+If you'd like to use this plugin with Ghostty, make sure to install the [static kitten binary](https://github.com/kovidgoyal/kitty/releases) which will allow you to run `kitten icat`.
+
 ## Features
 
 - Display matplotlib plots directly in kitty terminal
@@ -77,17 +82,12 @@ You can also resize the image when displaying:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - [matplotlib-backend-kitty](https://github.com/jktr/matplotlib-backend-kitty) for the original implementation
 - [matplotlib](https://github.com/matplotlib/matplotlib) and [Pillow](https://python-pillow.org/) for their excellent libraries
-- [kitty terminal](https://github.com/kovidgoyal/kitty) for supporting image protocol
+- [kitty terminal](https://github.com/kovidgoyal/kitty) for developing the graphics protocol
 
-## Contact
+## License
 
-If you have any questions or feedback, please open an issue on the GitHub repository.
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
