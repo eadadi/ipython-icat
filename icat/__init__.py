@@ -32,7 +32,7 @@ def _run(*cmd):
     return f
 
 
-_icat = _run("kitty", "+kitten", "icat", "--align", "left")
+_icat = _run("kitten", "icat", "--align", "left")
 
 
 class FigureManagerICat(FigureManagerBase):
