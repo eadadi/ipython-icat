@@ -45,6 +45,12 @@ To set the kitty backend for matplotlib as the default, add the following lines 
 1. `c.InteractiveShellApp.extensions = ['icat']`
 2. `c.InteractiveShellApp.exec_lines = ['%plt_icat']`
 
+#### Instant Initialization
+
+To quickly start working on a remote machine, use the `pycat setup` command after installing the package.
+This command creates a default IPython profile with the above configuration.
+This feature is useful for quick setup of environment.
+
 ### Displaying Images
 
 To display an image file or a PIL Image object:
