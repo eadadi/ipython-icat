@@ -27,3 +27,5 @@ dev-dependencies = [
 ]
 package = true
 
+[project.scripts]
+pycat = "icat.__init__:main"
