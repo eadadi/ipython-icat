@@ -26,4 +26,3 @@ dev-dependencies = [
     "jupyter>=1.1.1",
 ]
 package = true
-

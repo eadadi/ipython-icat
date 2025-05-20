@@ -1,20 +1,19 @@
 # modified from https://github.com/jktr/matplotlib-backend-kitty
 
-from IPython.core.magic_arguments import argument, magic_arguments, parse_argstring
-from IPython.core.magic import Magics, magics_class, line_magic
-
-from subprocess import run
-from io import BytesIO
 import sys
-import os
+from io import BytesIO
+from pathlib import Path
+from subprocess import run
 
-from matplotlib.backend_bases import _Backend, FigureManagerBase
-from matplotlib.backends.backend_agg import FigureCanvasAgg
+import matplotlib
+from IPython.core.magic import Magics, line_magic, magics_class
+from IPython.core.magic_arguments import argument, magic_arguments, parse_argstring
 from matplotlib import interactive, is_interactive
 from matplotlib._pylab_helpers import Gcf
-import matplotlib
-
+from matplotlib.backend_bases import FigureManagerBase, _Backend
+from matplotlib.backends.backend_agg import FigureCanvasAgg
 from PIL import Image
+
 
 if hasattr(sys, "ps1") or sys.flags.interactive:
     interactive(True)
@@ -84,7 +83,7 @@ class ICatMagics(Magics):
         user_ns = self.shell.user_ns
         if image_arg in user_ns and isinstance(user_ns[image_arg], Image.Image):
             img = user_ns[image_arg]
-        elif os.path.isfile(image_arg):
+        elif Path(image_arg).is_file():
             img = Image.open(image_arg)
         else:
             print(

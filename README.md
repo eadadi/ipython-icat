@@ -45,6 +45,28 @@ To set the kitty backend for matplotlib as the default, add the following lines 
 1. `c.InteractiveShellApp.extensions = ['icat']`
 2. `c.InteractiveShellApp.exec_lines = ['%plt_icat']`
 
+#### Automatic Setup
+
+You can quickly set up IPython to use the icat extension using the setup command:
+
+```bash
+python -m icat setup
+```
+
+This command will:
+1. Create an IPython profile if it doesn't exist (or use an existing one)
+2. Configure the profile to load the icat extension automatically
+3. Set matplotlib to use the icat backend by default
+
+Additional options:
+- `--profile NAME` - Use a specific profile instead of the default
+- `--ipython-path PATH` - Specify a custom path to the .ipython directory
+
+Example with custom profile:
+```bash
+python -m icat setup --profile myprofile
+```
+
 ### Displaying Images
 
 To display an image file or a PIL Image object:
