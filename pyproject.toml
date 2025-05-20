@@ -1,6 +1,6 @@
 [project]
 name = "ipython-icat"
-version = "0.2.3"
+version = "0.3.0"
 description = "IPython magic command for displaying images in kitty terminal"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -12,7 +12,7 @@ dependencies = [
 authors = [
     { name = "Tony Kabilan Okeke", email = "tonykabilanokeke@gmail.com" } 
 ]
-keywords = ["ipython", "magic", "image", "display", "kitty", "icat"]
+keywords = ["ipython", "magic", "image", "display", "kitty", "icat", "ipython extension", "ghostty"]
 
 [project.urls]
 Homepage = "https://github.com/Kabilan108/ipython-icat"
