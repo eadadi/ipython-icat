@@ -82,7 +82,13 @@ def get_profile_path(profile_name: str, ipython_path: Optional[str] = None) -> P
             ipython_path = Path(ipython_path).expanduser().resolve()
 
         if not ipython_path.exists():
-            raise FileNotFoundError(f"IPython path {ipython_path} does not exist")
+            if ipython_path is not None:
+                # Since ipython_path is not None, it must be a valid path
+                raise FileNotFoundError(f"IPython path {ipython_path} does not exist")
+            else:
+                # Create a default .ipython directory
+                # ipython_path = Path.home() / ".ipython"
+                ipython_path.mkdir(parents=True)
 
         profile_dir = ipython_path / f"profile_{profile_name}"
         if not profile_dir.exists():
